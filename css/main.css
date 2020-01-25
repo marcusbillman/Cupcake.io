@@ -1,1 +1,111 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: 45%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans Pro", "sans-serif";
+  color: white;
+}
+
+h1 {
+  font-size: 9.6rem;
+  font-weight: bold;
+  line-height: 110%;
+  margin-bottom: 6rem;
+}
+
+p {
+  font-size: 3.2rem;
+  font-weight: normal;
+  line-height: 155%;
+  min-width: 3rem;
+}
+
+.container {
+  padding: 0 100px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
+nav {
+  padding-top: 5rem;
+  position: fixed;
+}
+
+nav .nav-link {
+  font-weight: normal;
+  color: white;
+  opacity: 0.3;
+  text-decoration: none;
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 6rem;
+}
+
+nav .nav-link--active {
+  font-weight: bold;
+  color: #78bdff;
+  opacity: 1;
+}
+
+.hero {
+  background: #0c213d;
+  min-height: 100vh;
+}
+
+.hero__container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__content {
+  max-width: 1000px;
+}
+
+.hero h1 {
+  color: #78bdff;
+  max-width: 800px;
+}
+
+.hero p {
+  line-height: 170%;
+  margin-bottom: 8rem;
+}
+
+.button {
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  background: #ffb7d4;
+  color: #0c213d;
+  padding: 2rem 5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.fine-print {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: white;
+  opacity: 0.3;
+}
+/*# sourceMappingURL=main.css.map */
