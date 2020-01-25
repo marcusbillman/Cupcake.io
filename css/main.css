@@ -15,6 +15,17 @@ html {
 body {
   font-family: "Source Sans Pro", "sans-serif";
   color: white;
+  overflow-y: hidden;
+}
+
+::-moz-selection {
+  color: #0c213d;
+  background: #ffb7d4;
+}
+
+::selection {
+  color: #0c213d;
+  background: #ffb7d4;
 }
 
 h1 {
@@ -163,6 +174,14 @@ nav .nav-link--active {
   padding: 2rem 6rem;
   border-radius: 12px;
   margin-bottom: 2rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.button:hover {
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 .fine-print {

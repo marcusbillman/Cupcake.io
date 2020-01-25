@@ -20,6 +20,12 @@ html {
 body {
     font-family: "Source Sans Pro", "sans-serif";
     color: white;
+    overflow-y: hidden;
+}
+
+::selection {
+    color: $clr-blue-darkest;
+    background: $clr-pink-accent;
 }
 
 h1 {
@@ -154,6 +160,12 @@ nav {
     padding: 2rem 6rem;
     border-radius: 12px;
     margin-bottom: 2rem;
+    transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    &:hover {
+        border-radius: 30px;
+        box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .fine-print {
