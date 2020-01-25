@@ -36,6 +36,11 @@ p {
     min-width: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     padding: 0 100px;
     margin: 0 auto;
@@ -43,16 +48,26 @@ p {
     max-width: 1600px;
 }
 
-nav {
-    padding-top: 5rem;
+header {
+    margin-top: 5rem;
     position: fixed;
+    width: 100%;
     z-index: 10;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    .nav-menu {
+        display: none;
+        margin-right: 2rem;
+    }
 
     .nav-link {
         font-weight: normal;
         color: white;
         opacity: 0.3;
-        text-decoration: none;
         font-size: 2.4rem;
         display: inline-block;
         margin-right: 6rem;
@@ -124,6 +139,7 @@ nav {
         width: 220px;
         bottom: -100px;
         right: 25%;
+        clip-path: inset(0 0 100px 0);
     }
 }
 
@@ -133,7 +149,6 @@ nav {
     font-size: 3.6rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
-    text-decoration: none;
     background: $clr-pink-accent;
     color: $clr-blue-darkest;
     padding: 2rem 6rem;
@@ -165,7 +180,7 @@ nav {
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .container {
         padding: 0 20px;
     }
@@ -176,6 +191,16 @@ nav {
 
     p {
         font-size: 2.8rem;
+    }
+
+    nav {
+        .nav-menu {
+            display: inline;
+        }
+
+        .nav-link:not(.nav-link--active) {
+            display: none;
+        }
     }
 
     .hero {
@@ -194,6 +219,7 @@ nav {
         &__circle {
             width: 150px;
             bottom: -50px;
+            clip-path: inset(0 0 50px 0);
         }
     }
 

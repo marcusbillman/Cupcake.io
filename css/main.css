@@ -31,6 +31,11 @@ p {
   min-width: 3rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   padding: 0 100px;
   margin: 0 auto;
@@ -38,17 +43,31 @@ p {
   max-width: 1600px;
 }
 
-nav {
-  padding-top: 5rem;
+header {
+  margin-top: 5rem;
   position: fixed;
+  width: 100%;
   z-index: 10;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-menu {
+  display: none;
+  margin-right: 2rem;
 }
 
 nav .nav-link {
   font-weight: normal;
   color: white;
   opacity: 0.3;
-  text-decoration: none;
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 6rem;
@@ -125,6 +144,8 @@ nav .nav-link--active {
   width: 220px;
   bottom: -100px;
   right: 25%;
+  -webkit-clip-path: inset(0 0 100px 0);
+          clip-path: inset(0 0 100px 0);
 }
 
 .button {
@@ -137,7 +158,6 @@ nav .nav-link--active {
   font-size: 3.6rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  text-decoration: none;
   background: #ffb7d4;
   color: #0c213d;
   padding: 2rem 6rem;
@@ -165,7 +185,7 @@ nav .nav-link--active {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
   .container {
     padding: 0 20px;
   }
@@ -174,6 +194,12 @@ nav .nav-link--active {
   }
   p {
     font-size: 2.8rem;
+  }
+  nav .nav-menu {
+    display: inline;
+  }
+  nav .nav-link:not(.nav-link--active) {
+    display: none;
   }
   .hero__image-2 {
     width: 70%;
@@ -188,6 +214,8 @@ nav .nav-link--active {
   .hero__circle {
     width: 150px;
     bottom: -50px;
+    -webkit-clip-path: inset(0 0 50px 0);
+            clip-path: inset(0 0 50px 0);
   }
   .button {
     width: 100%;
