@@ -40,12 +40,13 @@ p {
     padding: 0 100px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
 }
 
 nav {
     padding-top: 5rem;
     position: fixed;
+    z-index: 10;
 
     .nav-link {
         font-weight: normal;
@@ -72,10 +73,12 @@ nav {
         height: 100vh;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     &__content {
         max-width: 1000px;
+        z-index: 1;
     }
 
     h1 {
@@ -86,6 +89,40 @@ nav {
     p {
         line-height: 170%;
         margin-bottom: 8rem;
+    }
+
+    &__image {
+        position: absolute;
+        height: 80vh;
+        width: 25%;
+        min-width: 300px;
+        object-fit: cover;
+    }
+
+    &__image-1 {
+        top: 0;
+        right: 40%;
+        opacity: 60%;
+    }
+
+    &__image-2 {
+        bottom: 0;
+        right: 10%;
+        opacity: 55%;
+    }
+
+    &__dots {
+        position: absolute;
+        width: 150px;
+        top: 10%;
+        right: 8%;
+    }
+
+    &__circle {
+        position: absolute;
+        width: 220px;
+        bottom: -100px;
+        right: 25%;
     }
 }
 
