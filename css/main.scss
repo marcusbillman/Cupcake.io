@@ -71,6 +71,7 @@ nav {
 
     &__container {
         height: 100vh;
+        min-height: 700px;
         display: flex;
         align-items: center;
         position: relative;
@@ -127,14 +128,15 @@ nav {
 }
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
     font-size: 3.6rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-decoration: none;
     background: $clr-pink-accent;
     color: $clr-blue-darkest;
-    padding: 2rem 5rem;
+    padding: 2rem 6rem;
     border-radius: 12px;
     margin-bottom: 2rem;
 }
@@ -145,4 +147,61 @@ nav {
     font-weight: normal;
     color: white;
     opacity: 0.3;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .hero {
+        &__image-1 {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-size: 7.4rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    p {
+        font-size: 2.8rem;
+    }
+
+    .hero {
+        &__image-2 {
+            width: 70%;
+            min-width: 0;
+            right: 0;
+        }
+
+        &__dots {
+            width: 25%;
+            top: 15%;
+            right: 5%;
+        }
+
+        &__circle {
+            width: 150px;
+            bottom: -50px;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .fine-print {
+        text-align: center;
+    }
 }

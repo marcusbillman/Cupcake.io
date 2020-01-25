@@ -67,6 +67,7 @@ nav .nav-link--active {
 
 .hero__container {
   height: 100vh;
+  min-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,14 +128,19 @@ nav .nav-link--active {
 }
 
 .button {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 3.6rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-decoration: none;
   background: #ffb7d4;
   color: #0c213d;
-  padding: 2rem 5rem;
+  padding: 2rem 6rem;
   border-radius: 12px;
   margin-bottom: 2rem;
 }
@@ -145,5 +151,49 @@ nav .nav-link--active {
   font-weight: normal;
   color: white;
   opacity: 0.3;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    padding: 0 60px;
+  }
+  .hero__image-1 {
+    display: none;
+  }
+  h1 {
+    font-size: 7.4rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  p {
+    font-size: 2.8rem;
+  }
+  .hero__image-2 {
+    width: 70%;
+    min-width: 0;
+    right: 0;
+  }
+  .hero__dots {
+    width: 25%;
+    top: 15%;
+    right: 5%;
+  }
+  .hero__circle {
+    width: 150px;
+    bottom: -50px;
+  }
+  .button {
+    width: 100%;
+  }
+  .fine-print {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
